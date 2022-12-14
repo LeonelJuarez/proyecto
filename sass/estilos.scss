@@ -1,3 +1,5 @@
+@import "variable";
+@import "mixin";
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Reggae+One&display=swap');
 
 
@@ -23,15 +25,15 @@ header{
     display: flex;
     flex-direction: column;
     font-size: large;
-    background-color: black;
+    background-color: $color2;
     width: 100%;
     
 }
 h1, h2{
     font-family: 'Reggae One',cursive;
-    color: rgb(39, 248, 39); 
+    color: $color; 
     margin-bottom: 40px;
-    font-size:40px;
+    font-size:$size;
 }
 nav ul li{
     margin-right: 6%;
@@ -39,17 +41,37 @@ nav ul li{
     padding: 10px;
 }
 ul li{
-    border: 5px solid rgb(39, 248, 39);
+    border: 5px solid $color;
 }
 a{
     text-decoration: none;
-    color: rgb(39, 248, 39);
+    color: $color;
 }
 footer{
     padding: 3em;
-    background-color: black;
+    background-color: $color2;
     margin-top: 1em;
 }
+.fechas{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fecha{
+    color: black;
+    text-align: center;
+    margin-top: 5px;
+    border: 10px solid black;
+    height: 60px;
+    width: 200px;
+    border-radius: 10px;
+}
+main{
+    margin-top: 6%;
+}
+
 header{
     grid-area: header;
 }
@@ -111,7 +133,7 @@ footer{
     }
     nav ul{
         display: flex;
-        border: 5px solid rgb(39, 248, 39);
+        border: 5px solid $color;
     }
     
     .lit{
@@ -120,18 +142,11 @@ footer{
     }
     .fechas{
         margin-top: 50px;
-        margin-left: 30%;
-        margin-bottom: 50px;
     }
 
     .fecha{
-        color: black;
-        margin-top: 10px;
-        border: 10px solid black;
-        height: 60px;
         width: 400px;
-        border-radius: 10px;
-        font-weight: bold;
+        
     }
     
 
@@ -167,7 +182,7 @@ footer{
         "nav     nav     nav     nav"
         "inicio  inicio   inicio inicio"
         "footer  footer   footer footer";
-        grid-template-columns: 1f 3fr 2fr 1fr;
+        grid-template-columns: 1f 1fr 1fr 1fr;
     }
 
     .articulo{
@@ -199,6 +214,8 @@ footer{
     }
     footer{
         padding: 100px;
+        width: 100%;
+        
     }
     
     

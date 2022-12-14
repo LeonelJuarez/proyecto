@@ -1,0 +1,8 @@
+@mixin medida($width, $height){
+    height: $height;
+    width: $width;
+}
+
+.fecha{
+    @include medida (200px, 60px)
+}
